@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+
+
+<!--  style="background-image: url(./images/pexels-pixabay-280490.jpg);" -->
+<section class="show-section-staff">
+    <div class="show-area-staff" style="background-image: url('{{ faulty_header.image.url }}');">
+        <div class="ourley"></div>
+    </div>
+</section>
+
+
+
+<section class="profile-staff">
+    <div class="profile-staff-inside">
+        <div class="container">
+            <div class="profile-staff-main-container">
+
+                <div class="profile-staff-left">
+                    <img src="{{ staff.image.url }}" alt="" class="profile-picture">
+                </div>
+
+                <div class="profile-staff-right">
+                    <div class="profile-staff-right-top">
+                        <h1 class="profile-name font-garamond">{{ staff.name }}</h1>
+                        <p class="profile-position-title font-garamond">
+                            {{ staff.designation }}
+                        </p>
+                    </div>
+                    <div class="profile-staff-right-bottom">
+                        <div class="profile-staff-right-bottom-email">
+                            <span class="icon-profile-person"><i class="fa-solid fa-envelope fa-2x"></i></span>
+                            <span class="profile-staff-contact-info">{{ staff.email }}</span>
+                        </div>
+                        <div class="profile-staff-right-bottom-email">
+                            <span class="icon-profile-person"><i class="fa-solid fa-phone fa-2x"></i></span>
+                            <span class="profile-staff-contact-info">{{ staff.phone }}</span>
+                        </div>
+                        <div class="profile-staff-right-bottom-email">
+                            <span class="icon-profile-person"><i class="fa-solid fa-location-dot fa-2x"></i></span>
+                            <span class="profile-staff-contact-info">{{ staff.location }}</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="main-content-about-profile">
+    <div class="container">
+
+        <div class="profile-links-pagination">
+            <a href="/" class="profile-about-link margin-right-pagination">Home</a>
+            <span class="inside-profile-content-sign margin-right-pagination"><p>&frasl;</p></span>
+            <a href="/faculty/" class="profile-about-link margin-right-pagination">Faculty Directory</a>
+            <span class="inside-profile-content-sign margin-right-pagination"><p>&frasl;</p></span>
+            <h1 class="profile-about-link profile-link margin-right-pagination">{{ staff.name }}</h1>
+        </div>
+        
+        
+        <div class="container-profile">
+            <article class="biography">
+                <!-- <h1 class="article-biography-title font-garamond">Biography</h1> -->
+                <p class="article-biography-p">
+                    {{ staff.about|safe }}
+                </p>
+                <div class="collapsilble-container">
+                    <div class="collapsible-item">
+                        <button class="collapsible">Education</button>
+                        
+                        <div class="content">
+                            <div class="collapsible-content">
+                                <p>
+                                    {{ staff.education }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collapsible-item">
+                        <button class="collapsible">Honors & Awards</button>
+                        <div class="content">
+                            <div class="collapsible-content">
+                                <p>
+                                    {{ staff.honors_awards }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collapsible-item">
+                        <button class="collapsible">Publications</button>
+                        <div class="content">
+                            <div class="collapsible-content">
+                                <p>
+                                    {{ staff.publications}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </article>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

@@ -1,0 +1,206 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/notice.css' %}">
+    <link rel="stylesheet" href="{% static 'css/merit_list.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/staff.css' %}">
+    <link rel="stylesheet" href="{% static 'css/faculty.css' %}">
+    <link rel="stylesheet" href="{% static 'css/department.css' %}">
+    <link rel="stylesheet" href="{% static 'css/departments.css' %}">
+    <link rel="stylesheet" href="{% static 'css/downloads.css' %}">
+    <link rel="stylesheet" href="{% static 'css/newspage.css' %}">
+    <link rel="stylesheet" href="{% static 'css/online-section.css' %}">
+    <link rel="stylesheet" href="{% static 'css/online-page.css' %}">
+    <link rel="stylesheet" href="{% static 'css/online-page.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Government Degree College Mingora Swat</title>
+    <link rel="icon" type="image/x-icon" href="/static/images/logo.png">
+
+</head>
+<body>
+    <!-- ############################################# Navbar ######################################################## -->
+    
+    <nav class="navbar" id="navbar">
+        <!-- <div class="navbar-up-line"></div>
+        
+        <div class="nav-bar"> -->
+
+            
+
+            <div class="container">
+                <!-- ############################################# Navbar Up ######################################################## -->
+                <div class="navbar-container">
+                    <div class="logo font-garamond">
+                        <a href="/"><img src="/static/images/logo.png" alt="GDC logo" class="logo-img"></a>
+                        <!-- <a href="#"><h1 class="logo-text">Government Degree College Mingora<span>گورنمنٹ ڈگری کالج مینگورہ</span></h1></a> -->
+                        <a href="/"><h1 class="logo-text">Government Degree<span>College Mingora</span></h1></a>
+                        <!-- <a href="#"><h1 class="logo-text">GDC Mingora</h1></a> -->
+                    </div>
+                
+                    <div class="contacts">
+                            <p class="sm-heading"><i class="fa-solid fa-phone"></i> 0946-818200 </p>
+                            <div class="social-links">
+                                <a href="#"><span class="icon-nav-uniform icon-youtube"><i class="fa-brands fa-youtube fa-3x"></i></span></a>
+                                <a href="#"><span class="icon-nav-uniform icon-facebook"><i class="fa-brands fa-facebook-square fa-3x"></i></span></a>
+                                <a href="#"><span class="icon-nav-uniform icon-instagram"><i class="fa-brands fa-instagram fa-3x"></i></span></a>
+                                <a href="#"><span class="icon-nav-uniform icon-twitter"><i class="fa-brands fa-twitter fa-3x"></i></span></a>
+                            </div>
+                    </div>
+
+                    
+
+                    
+                </div>
+            
+            </div>
+    
+
+        <!-- <div class="checkbox-div"> -->
+            
+        <!-- </div> -->
+        
+                    <!-- ############################################# Navbar down ######################################################## -->
+        <div class="navbar-down">
+            <div class="container container-special">
+
+
+                <input type="checkbox" name="" id="" onclick="lockScroll();">
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <ul class="nav-items">
+                    <a href="/"><li class="home-navbar">Home</li></a>
+                    <a href="/about/"><li>About</li></a>
+                    <a href="/departments/"><li>Departments</li></a>
+                    <!-- <a href="#"><li>Gallery</li></a> -->
+                    <a href="/faculty/"><li>Faculty</li></a>
+                    <a href="/downloads/"><li>Downloads</li></a>
+                    <a href="#news-section"><li>News</li></a>
+                    <a href="#"><li>Admissions</li></a>
+                    <a href="#footer"><li>Contact Us</li></a>
+                </ul>
+
+                
+            </div>
+            
+        </div>
+    </nav>
+
+
+
+
+
+    {% block content %}
+
+
+
+
+
+    {% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ######################################################### Footer ############################################# -->
+    <footer class="footer" id="footer">
+
+        <div class="footer-content">
+
+            <div class="container">
+
+                <div class="footer-up-main">
+                    <div class="footer-main">
+                        
+                        <div class="footer-helpful">
+
+                            <h1>Helpful Links</h1>
+                            <hr>
+                            <div class="footer-helpful-links">
+                                <a href="/#footer">Contact Us</a>
+                                <a href="https://www.hec.gov.pk/english/Pages/default.aspx">HEC</a>
+                                <a href="#">Admissions</a>
+                                <a href="/about/">About</a>
+                                <a href="https://ese.kp.gov.pk/">Ministry of education</a>
+                                <a href="#">Results</a>
+                                <a href="/departments/">Departments</a>
+                                <a href="#">Privacy Policy</a>
+                                <a href="https://goo.gl/maps/ovkrADgoRbq4KtR19">Maps & Directions</a>
+                            </div>
+                            
+                        </div>
+                        <div class="footer-address">
+                            <h1>Address</h1>
+                            <hr>
+                            <p>Takhtaband Road Mingora Swat</p>
+                        </div>
+                        <div class="footer-contacts">
+                            <h1>Contacts</h1>
+                            <hr>
+                            <p>0946-81820, Email : mingoragdc@yahoo.com</p>
+                        </div>
+                    </div>
+
+                    <div class="logo-footer">
+                        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d495.5711745967469!2d72.3274029799523!3d34.78069257551711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dc17ff62f747cb%3A0x8b3d8ea891d16f0d!2sGovt%20Degree%20College%20Takhta%20Band%20Mingora!5e1!3m2!1sen!2s!4v1658301068963!5m2!1sen!2s" width="350" height="300" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                        <img src="/static/images/logo.png" alt="" class="logo-image-footer">
+                        <!-- <img src="./images/footer-img.png" alt="" width="300px" height="300px"> -->
+                    </div>
+
+                    
+                </div>
+
+
+
+
+                <hr class="footer-main-divider">
+                <div class="footer-below">
+                    <div class="footer-main-statement">
+                        <h1 class="copyright-statement font-garamond">Coyright &copy; GDC Mingora &#8226; All Rights Reserved &#8226; Designed & Developed by <a href="/faculty/7/"><span class="developer-shah-name font-garamond"> Fahim Ullah Shah</span></a> &#8226; </h1>
+                    </div>
+                    <div class="icons-footer">
+                        <a href="#"><span class="icon-footer-uniform icon-youtube"><i class="fa-brands fa-youtube fa-3x"></i></span></a>
+                        <a href="#"><span class="icon-footer-uniform icon-facebook"><i class="fa-brands fa-facebook-square fa-3x"></i></span></a>
+                        <a href="#"><span class="icon-footer-uniform icon-instagram"><i class="fa-brands fa-instagram fa-3x"></i></span></a>
+                        <a href="#"><span class="icon-footer-uniform icon-twitter"><i class="fa-brands fa-twitter fa-3x"></i></span></a>
+                    </div>
+                </div>
+                
+                
+
+
+
+                <div class="footer-back-to-top">
+                    <a href="#navbar" class="backtotop-a">Back to Top &uarr;</a>      
+                </div>
+                
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/static/js/script.js"></script>
+
+</body>
+</html>

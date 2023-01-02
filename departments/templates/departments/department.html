@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+
+{% block content %}
+ 
+ 
+ <!-- ######################################## upper background ################################################### -->
+    <section class="department-main-section" style="background-image: url('{{ department.image.url }}');">
+        <div class="container">
+            <div class="department-main">
+                <h1>Department of {{ department.name }}</h1>
+            </div>
+        </div>    
+    </section>
+
+
+
+
+
+        <!-- ######################################### TABS ###################### -->
+    <section class="department-tabs">
+        <div class="container">
+
+            <div class="tabset">
+                <!-- Tab 1 -->
+                <input type="radio" name="tabset" id="tab1" aria-controls="marzen" checked>
+                <label for="tab1">About</label>
+                <!-- Tab 2 -->
+                <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
+                <label for="tab2">Faculty</label>
+                <!-- Tab 3 -->
+                <input type="radio" name="tabset" id="tab3" aria-controls="dunkles">
+                <label for="tab3">Downloads</label>
+                
+                <div class="tab-panels">
+                <section id="marzen" class="tab-panel">
+                    <!-- <h2>About Botony in GDC</h2>
+                    <strong>Overall Impression:</strong>
+                    <p> An elegant, malty German amber lager with a clean, rich, toasty and bready malt flavor, restrained bitterness, and a dry finish that encourages another drink. The overall malt impression is soft, elegant, and complex, with a rich aftertaste that is never cloying or heavy.</p>
+                    <strong>History:</strong>
+                    <p> As the name suggests, brewed as a stronger “March beer” in March and lagered in cold caves over the summer. Modern versions trace back to the lager developed by Spaten in 1841, contemporaneous to the development of Vienna lager. However, the Märzen name is much older than 1841; the early ones were dark brown, and in Austria the name implied a strength band (14 °P) rather than a style. The German amber lager version (in the Viennese style of the time) was first served at Oktoberfest in 1872, a tradition that lasted until 1990 when the golden Festbier was adopted as the standard festival beer.</p>
+                    <strong>Programs Offered : </strong>
+                    <p>
+                        <li>BS</li>    
+                        <li>Undergraduate</li>    
+                    </p> -->
+                    {{ department.about|safe }}
+
+                </section>
+
+
+            
+
+                <section id="rauchbier" class="tab-panel">
+                    
+                      
+
+
+                    <div class="directory-inside">
+                        
+                        {% for staf in staff %}
+                        <div class="card">
+                            <img src="{{ staf.image.url }}" alt="Profile Image">
+                            <h1>{{ staf.name }}</h1>
+                            <p class="position-name">{{ staf.designation }}</p>
+                            <p class="card-button-learn-more"><a href="/faculty/{{ staf.id }}/">Learn More &#8594</a></p>
+                        </div>
+                        {% endfor %}
+                        <!-- <div class="card">
+                            <img src="./images/rahat.jpg" alt="Profile Image">
+                            <h1>Rahat Gul</h1>
+                            <p class="position-name">Head of Urdu Department</p>
+                            <p class="card-button-learn-more"><a href="#">Learn More &#8594</a></p>
+                        </div>
+                        <div class="card">
+                            <img src="./images/muhammad-rasool.jpg" alt="Profile Image">
+                            <h1>Muhammad Rasool</h1>
+                            <p class="position-name">Incharge Library</p>
+                            <p class="card-button-learn-more"><a href="#">Learn More &#8594</a></p>
+                        </div>
+                        <div class="card">
+                            <img src="./images/nasir.jpg" alt="Profile Image">
+                            <h1>Nasir Khan</h1>
+                            <p class="position-name">Head of Maths Department</p>
+                            <p class="card-button-learn-more"><a href="#">Learn More &#8594</a></p>
+                        </div> -->
+                    </div>
+                
+                    
+
+                     
+                    {% for stf in staff %}
+                    {% if stf.head_of_department %}
+                        
+                    <section class="founding-principal">
+                        <div class="container">
+                            <h1 class="founding-principal-title font-garamond">Head of the Department Message</h1>
+                            <div class="founding-principal-container">
+                                <div class="founding-principal-right font-garamond">
+                                    <h1 class="founding-pricipal-name">{{ stf.name }}</h1>
+                                    <div class="founding-principal-about font-garamond">
+                                        <p>
+                                            {{ department.head_of_department_message }}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="founding-principal-left">
+                                    <img src="{{ stf.image.url }}" alt="Principal Image">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                        
+                    {% endif %}
+                    {% endfor %}
+                
+                
+                </section>
+
+                <section id="dunkles" class="tab-panel">
+                    <h1 class="downloads-title font-garamond">Downloads</h1>
+                    <div class="downloads-container">
+                        <table class="content-table">
+                            <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Title</th>
+                                <th>Download</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                {% if downloads %}
+                                {% for download in downloads %}
+                            <tr>
+                                <td>1</td>
+                                <td>{{ download.title }}</td>
+                                <td><button class="download-button"><a href="{{ download.title }}" class="download-link" download="GDC-LOGO">Download</a></button></td>
+                            </tr>
+                            {% endfor %}
+                            {% endif %}
+                            
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                </div>
+                
+            </div>
+            
+            <!-- <p><small>Source: <cite><a href="https://www.bjcp.org/stylecenter.php">BJCP Style Guidelines</a></cite></small></p> -->
+        </div>
+    </section>
+
+
+
+
+{% endblock content %}

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+
+
+{% load static %}
+{% block content %}
+
+
+    <section class="news-head-page">
+        <div class="container">
+            <div class="news-head-page-main">
+                <!-- <div class="news-head-top">
+                    <img src="./images/developer.jpeg" alt="" class="news-head-top-image">
+                </div> -->
+                <div class="news-head-middle">
+                    <h1 class="news-head-heading font-garamond">{{ news.title }}</h1>
+                </div>
+                <div class="news-head-bottom">
+                    <span class="news-head-category">{{ news.type }} &#8226;</span>
+                    <span class="news-head-date">{{ news.published_date }}</span>
+                </div>
+                <div class="news-head-last">
+                    <hr class="news-head-last-hr">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="news-main-page">
+        <div class="container">
+            <div class="news-main-body-page">
+                {{ news.content|safe}}
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}

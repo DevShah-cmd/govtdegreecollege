@@ -1,0 +1,39 @@
+    {% extends "base.html" %}
+
+    {% block content %}
+
+
+
+
+        <section class="merit-list-section">
+            <div class="container">
+                <div class="merit-list-heading-contianer">
+                    <h1 class="merit-list-heading">View Merit List</h1>
+                </div>
+                <div class="merit-list-container">
+                    <div class="merit-list-container-inside">
+                        <div class="merit-list-title-container">
+                            <p class="merit-list--title">{{ merit_list.title }}</p>
+                        </div>
+                        <div class="merit--list">
+                            {{ merit_list.merit_list|safe }}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="footer-print-merit-list">
+            <div class="footer-print-merit-container">
+                <h1 class="footer-print-copyright">
+                    Copyright &copy; G.D.C Website
+                </h1>
+            </div>
+
+        </div>
+
+
+
+
+    {% endblock content %}

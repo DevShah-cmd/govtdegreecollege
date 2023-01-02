@@ -1,0 +1,416 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+
+    <!-- ############################################# Show Area ######################################################## -->
+<section class="show-area" style="background-image: url('{{ header.image.url }}');">
+    <div class="show-container">
+        <div class="container">
+            
+        </div>
+    </div>
+    
+
+</section>
+
+<section class="study-gdc-section">
+    <div class="container">
+        <div class="study-gdc-container">
+            <div class="study-gdc-container-inside">
+                
+
+                <div class="study-gdc-container-inside-container">
+                    <img src="./images/web-search-result-found-icon.svg" alt="" class="study-gdc-container-inside-container-img">
+                    <a href="/onlinesection" class="study-gdc-container-inside-container-title">Online Section</a>
+                </div>
+                <div class="study-gdc-container-inside-container">
+                    <img src="./images/file-download-import-icon.svg" alt="" class="study-gdc-container-inside-container-img">
+                    <a href="/downloads/" class="study-gdc-container-inside-container-title">Downloads</a>
+                </div>
+                <div class="study-gdc-container-inside-container">
+                    <img src="./images/icons8-apply-64.png" alt="" class="study-gdc-container-inside-container-img">
+                    <a href="#" class="study-gdc-container-inside-container-title">Apply</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<!--########################################################### Featured News Section ################################################################# -->
+<section class="news-main-section" id="news-section">
+    <div class="container">
+        <div class="news-main-section-container">
+            
+            <div class="news-heading-div">
+                <h1 class="news-heading-left-hd font-garamond">
+                    Featured News
+                </h1>
+            
+                <a href="#" class="news-heading-right-see">
+                    See All &rarr;
+                </a>
+            </div>
+
+            
+
+            <article class="news--article">
+                {% if news %}
+                {% for new in news|slice:":3"%}
+                <article class="news--article-article">
+                    <div class="news--article-div">
+                        <div class="news-article-top">
+                                <img src="./images/file-download-import-icon.svg" alt="" class="news-top-icon">
+                                <p class="news-top-category">{{ new.type }}</p>
+
+                        </div>
+                        <div class="news-article-middle">
+                            <a href="/news/{{ new.id }}" class="news-article-news">
+                                <p>
+                                    {{ new.title }}
+                                </p>
+                            </a>
+                        </div>
+                        <div class="news-article-bottom">
+                            <p class="news-article-bottom-tag">
+                                Published : {{ new.published_date}}
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                {% endfor %}
+                {% endif %}
+            </article>
+                    
+
+
+            
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% if principal %}
+<section class="principal-message">
+    <div class="container">
+        <h1 class="text-white principal-heading font-garamond select-black--bgwhite">Principal Message</h1>
+
+        <div class="content-principal-message">
+            <div class="principal-message-left">
+                <p class="text-white principal-message-main font-garamond">
+                    {{ principal.message|truncatewords:80 }}    
+                </p>
+                <a href="/about" class="principal-read-more">  Read More &#8594</a>
+            </div>
+            <div class="principal-message-right">
+                <div class="principal-message-right-inside">
+                    <img src="{{ principal.image.url }}" alt="Principal Image" class="principal-image">
+                    <p class="text-white principal-name">{{ principal.name }}</p>
+                    <p class="text-white principal-rank">Principal GDC</p>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+    
+</section>
+{% endif %}
+
+
+<!-- ################################################################### Our vision #################################### -->
+
+
+
+{% if our_vision %}
+<section class="our-vision">
+    <div class="our-vision-content">
+
+        <div class="container">
+            <div class="our-vision-main">
+                <div class="our-vision-left">
+                    <div class="our-vision-left-inside">
+                        <h1 class="our-vision-title font-garamond select-black--bgwhite">Our Vision</h1>
+                        
+                        <p class="our-vision-statement">
+                            <span class="quote">&ldquo;</span>
+                            {{ our_vision.our_vision|safe|truncatewords:200 }}  
+                            <span class="quote">&rdquo;</span>
+                        </p>    
+                        </div>
+                </div>
+                <div class="our-vision-right">
+                    <div class="our-vision-right-inside">
+                        <img src="{{ our_vision.image.url }}" alt="" class="our-vision-right-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endif %}
+
+
+
+
+
+
+
+    <!-- ######################################################## About GDC ########################################### -->
+    {% if about %}
+    <section class="about" id="about">
+        <div class="container">
+                <h1 class="about-gdc-heading font-garamond select-black--bgwhite">About GDC</h1>
+                <p class="about-gdc-history">
+                    {{ about.about }}
+                </p>
+
+                <div class="facts">
+                    <div class="fact opening-date">
+                        <p>Opened In</p>
+                        <h1>1995</h1>
+                    </div>
+                    <div class="fact students-count">
+                        <p>Students</p>
+                        <h1>{{ about.students }}</h1>
+                    </div>
+                    <div class="fact faculty-count">
+                        <p>Faculty</p>
+                        <h1>{{ about.faculty }}</h1>
+
+                    </div>
+                </div>
+                <div class="btn-about">
+                    <a href="/about/" class="btn btn-more-about">More About GDC</a>
+                </div>
+                
+        </div>
+    </section>
+
+    {% endif %}
+
+
+
+
+
+
+
+
+    
+
+
+
+<!-- ############################################# Noticeboard Section ######################################################## -->
+
+
+<section class="news-section" id="news">
+    <div class="news-section-inside">
+        <div class="container">
+            <div class="news-section-main">
+                <div class="news-section-left">
+                    <h1 class="news-section-left-main-title font-garamond select-black--bgwhite">Noticeboard</h1>
+                    <div class="notice-board">
+                        <ul class="notice-board-ul">
+                            {% if notices %}
+                                {% for notice in notices|slice:":6"%}
+                                <li class="notice-board-li">
+                                    <p class="notice-board-category capitalize">{{ notice.category }} </p>
+                                    <a href="/notice/{{ notice.id }}" class="notice-board-link" target="_blank">
+                                        {{ notice.title }}
+                                    </a>
+                                    <hr class="notice-board-hr">
+                                </li>
+                                {% endfor %}
+                            {% endif %}
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="news-section-right">
+                    <h1 class="imp-dates-main-title font-garamond select-black--bgwhite">Events</h1>
+                    <hr class="imp-dates-hr">
+                    <div class="imp-dates">
+                        <ul class="imp-dates-ul">
+
+                            {% if events %}
+                                {% for event in events|slice:":5"%}
+                                <li class="imp-dates-li">
+                                    <div class="imp-dates-content-li-inside">
+                                        <div class="imp-dates-li-date">
+                                            <span class="imp-dates-month">{{ event.date|date:"M" }}</span>
+                                            <span class="imp-dates-day">{{ event.date|date:"d" }}</span>
+                                        </div>
+                                        <div class="imp-dates-li-title">
+                                            <a href="#" class="imp--dates-link"><h1 class="imp-dates-li-title-h1">{{ event.title }}</h1></a>
+                                            <span class="imp-dates-venue-span">Venue :</span>
+                                            <p class="imp-dates-venue">{{ event.venue }}</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            {% endif %}
+
+                            
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    
+
+
+    <!-- #################################################################### OUR facilities ##################################################### -->
+
+
+
+    <section class="our-facilities">
+        <div class="our-facilities-inside">
+            <div class="container">
+                <h1 class="our-facilities-main-title font-garamond select-black--bgwhite">Campus Life</h1>
+                <div class="our-facilities-content">
+
+                    {% for campus_life in campus_life_s %}
+
+                    <div class="our-facilities-library">
+                        <div class="our-facilities-library-inside">
+                            <img src="{{ campus_life.image.url }}" alt="" class="our-facilities-img our-facilities-library-img">
+                            <div class="our-facility-inside-div-text">
+                                <a href="{{ campus_life.link }}" class="our-facility-h1-a" target="">
+                                    <h1 class="our-facility-h1 our-facilities-library-h1">{{ campus_life.heading }}</h1>
+                                </a>
+                                
+                                <p class="our-facility-p our-facilities-library-p">
+                                    {{ campus_life.about|safe|truncatechars:120 }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ################################################################ OUR programs ############################################################################# -->
+
+    <section class="our--programs">
+        <div class="container">
+            <h1 class="our--programs-main-heading font-garamond select-black--bgwhite">Our Programs</h1>
+            <div class="our--programs-container">
+                <div class="our--programs-right">
+                    <div class="our--program-second">
+                        <div class="our--program-inside">
+                            <h1 class="our--program-title font-garamond">Undergraduate</h1>
+                            <p class="our--program-p">
+                                Government Degree College also offers B.S & B.A degrees in differnt programs. We have bachelor degrees in Botany and Economics.
+                            </p>
+                            <button class="our--program-button button--second-program">See More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="our--programs-left">
+                    <div class="our--program-first">
+                        <div class="our--program-inside">
+                            <h1 class="our--program-title font-garamond">Intermediate</h1>
+                            <p class="our--program-p">
+                                Government Degree college offers F.Sc in three programs : Pre-Medical, Pre-Engineering and Computer Science. We also offer some Intermediate programs in Arts. 
+                            </p>
+                            <button class="our--program-button button--first-program">See More</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ######################################################## action section ############################################### -->
+
+
+{% if actions %}
+
+<section class="apply-now-section">
+    {% for action in actions|slice:":3" %}
+    <div class="container">
+        <div class="apply-now-container" style="background-image: linear-gradient(rgba(40, 40, 40, 0.6), rgba(40, 40, 40, 0.6)), url('{{ action.image.url }}');">
+            <div class="apply-now-inside">
+                <h1 class="apply-now-title font-garamond select-black--bgwhite">{{ action.action }}</h1>
+                <hr class="apply-now-hr">
+                <a href="{{ action.link }}" class="apply-now-button-link"><button class="apply-now-button">{{ action.link_text }}</button></a>
+
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+</section>
+
+{% endif %}
+
+
+
+
+{% endblock content %}

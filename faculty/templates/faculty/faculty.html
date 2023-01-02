@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+    <!-- ######################################## main section ################################################### -->
+    <section class="faculty-main-section"  style="background-image: url('{{ faulty_header.image.url }}');">
+        <div class="container">
+            <div class="faculty-main">
+                <h1 class="faculty-main-title">Faculty Directory</h1>
+            </div>
+        </div>    
+    </section>
+
+
+
+
+
+    <!-- ########################################## search and menu section ######################################## -->
+    <section class="search-navigate">
+        <div class="container">
+
+            <div class="search-main">
+
+                <div class="search-left">
+                    <div class="search-by-name">
+                        <label for="name">Search by Name</label>
+                        <input type="search" name="name" id="name" placeholder="Search by Name" class="inputs">
+                    </div>
+                    <div class="search-by-dep">
+                        <label for="department">Search by department or program</label>
+                        <select name="department" id="department" class="inputs">
+                            <option value="All" selected>All</option>
+                            {% for department in departments_list %}
+                            <option value="{{ department.name }}">{{ department.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="search-by-classify">
+                        <label for="classification">Classify by Designation</label>
+                        <select name="classification" id="classification" class="inputs classification">
+                            <option value="All" selected>All</option>
+                            {% for department in departments_list %}
+                            <option value="{{ department.name }}">{{ department.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    
+                    <div class="search-buttons">
+                        <button type="submit" class="search-btn">Search</button>
+                        <button type="submit" class="search-btn">Clear All</button>
+                        <!-- <div class="search-button-div">
+                            <a href="#" class="search-button btn-search-faculty">Search</a>
+                        </div>
+                        <div class="search-button-div">
+                            <a href="#" class="clear-all btn-search-faculty">Clear All</a>
+                        </div> -->
+                    </div>
+                    
+                </div>
+
+                <div class="department-right">
+                        <div class="department-right-content">
+                            <h1>Hierarchy Menu</h1>
+                            <a href="/departments/" class="departments-menu-link">Departments</a>
+                            <a href="/faculty/">Faculty Directory</a>
+                        </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+<!-- ################################################## Directory Section ####################################### -->
+
+    <section class="directory">
+        <div class="container">
+            <div class="positions-directory">
+                <h1>Faculty & Staff</h1>
+            </div>
+            <div class="directory-inside">
+                {% for faculty in faculties%}
+                <div class="card">
+                    <img src="{{ faculty.image.url }}" alt="Profile Image">
+                    <h1>{{ faculty.name }}</h1>
+                    <p class="position-name">{{ faculty.designation }}</p>
+                    <p class="card-button-learn-more"><a href="{{ faculty.number_in_order }}/">Learn More &#8594</a></p>
+                </div>
+                {% endfor %}
+<!--                 
+                <div class="card">
+                    <img src="./images/rahat.jpg" alt="Profile Image">
+                    <h1>Rahat Gul</h1>
+                    <p class="position-name">Head of Urdu Department</p>
+                    <p class="card-button-learn-more"><a href="#">Learn More &#8594</a></p>
+                </div>
+                <div class="card">
+                    <img src="./images/muhammad-rasool.jpg" alt="Profile Image">
+                    <h1>Muhammad Rasool</h1>
+                    <p class="position-name">Incharge Library</p>
+                    <p class="card-button-learn-more"><a href="#">Learn More &#8594</a></p>
+                </div>
+                <div class="card">
+                    <img src="./images/nasir.jpg" alt="Profile Image">
+                    <h1>Nasir Khan</h1>
+                    <p class="position-name">Head of Maths Department</p>
+                    <p class="card-button-learn-more"><a href="#">Learn More &#8594</a></p>
+                </div>
+                <div class="card">
+                    <img src="./images/profile.png" alt="Profile Image">
+                    <h1>Name</h1>
+                    <p class="position-name">Position</p>
+                    <p class="card-button-learn-more"><a href="#">Learn More &#8594</a></p>
+                </div>
+                <div class="card">
+                    <img src="./images/pexels-armin-rimoldi-5554267.jpg" alt="Profile Image">
+                    <h1>Name</h1>
+                    <p class="position-name">Position</p>
+                    <p class="card-button-learn-more"><a href="#">Learn More &#8594</a></p>
+                </div>
+                <div class="card">
+                    <img src="./images/profile.png" alt="Profile Image">
+                    <h1>Name</h1>
+                    <p class="position-name">Position</p>
+                    <p class="card-button-learn-more"><a href="#">Learn More &#8594</a></p>
+                </div>
+                <div class="card">
+                    <img src="./images/profile.png" alt="Profile Image">
+                    <h1>Name</h1>
+                    <p class="position-name">Position</p>
+                    <p class="card-button-learn-more"><a href="#">Learn More &#8594</a></p>
+                </div> -->
+
+            </div>
+<!-- 
+            <div class="positions-directory">
+                <h1>Web Administration</h1>
+            </div>
+            <div class="directory-inside">
+                <div class="card">
+                    <img src="./images/developer.jpeg" alt="Profile Image">
+                    <h1>Fahim Ullah Shah</h1>
+                    <p class="position-name">Web Developer(Ex-Student GDC)</p>
+                    <p class="card-button-learn-more"><a href="#">Learn More &#8594</a></p>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+
+
+
+
+{% endblock content %}

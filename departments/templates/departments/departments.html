@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+ 
+
+
+
+
+<!-- ################################################# departments show ################################ -->
+    <!-- <section class="departments-home">
+        <div class="container">
+            <div class="departments-header-title">
+                <h1 class="departments-title">Departments</h1>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="departments-home" style="background-image: url('{{ department_header.image.url }}');">
+        <div class="container">
+            <div class="departments-header-div">
+                <h1 class="departments-title">Departments</h1>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- ########################################### Main Departments #################################### -->
+    <section class="main-departments">
+        <div class="container">
+            <div class="main-departments-contents">
+                <div class="department-left">
+                    {% for department in departments %}
+                    <a href="department/{{ department.id }}" class="department-name">{{ department.name }}</a>
+                    {% endfor %}
+                </div>
+                <div class="department-right">
+                    <div class="department-right-content">
+                        <h1>Hierarchy Menu</h1>
+                        <a href="/departments/" class="departments-menu-link">Departments</a>
+                        <a href="/faculty/">Faculty Directory</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}

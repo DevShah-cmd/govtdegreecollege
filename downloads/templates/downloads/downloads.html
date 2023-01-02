@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+ 
+
+
+
+    <section class="downloads-section">
+        <div class="container">
+            <h1 class="downloads-title font-garamond">All Downloads</h1>
+            <div class="downloads-container">
+                <table class="content-table">
+                    <thead>
+                      <tr>
+                        <!-- <th>S.No</th> -->
+                        <th>Title</th>
+                        <th>Download</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% if downloads %}
+                        {% for download in downloads%}
+                      <tr>
+                        <!-- <td>1</td> -->
+                        <td>{{ download.title }}</td>
+                        <td><button class="download-button"><a href="{{ download.link }}" class="download-link" download="GDC-LOGO">Download</a></button></td>
+                      </tr>
+                      
+                        {% endfor %}
+                      {% endif  %}
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    
+
+
+
+
+
+{% endblock content %}

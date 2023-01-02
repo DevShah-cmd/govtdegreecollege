@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+
+
+{% load static %}
+{% block content %}
+
+
+
+
+
+<header class="notification-header">
+    <div class="video-notification">
+        <video id="background-video" autoplay loop muted poster="./images/">
+            <source src="{% static 'images/bg-video.mp4' %}" type="video/mp4">
+        </video>
+    </div>
+</header>
+
+<section class="notification-content">
+
+    <div class="container">
+
+        <div class="notification-container">
+            <article class="article-notification-article">
+
+                <div class="article-notification-article-inside">
+                    <div class="notification-headline-div">
+                        <h1 class="notification-headline font-garamond">{{ notice.title }}</h1>
+                        <p class="notification-date">{{ notice.date_posted|date:"d M, Y" }} &#8226; {{ notice.category }}</p>
+                        
+                    </div>
+                    <div class="notification-main">
+                        <p class="notification-main-p">
+                            {{ notice.notice | safe }}  
+                        </p>
+
+                    </div>
+                </div>
+            </article>
+        </div>
+
+    </div>
+    
+</section>
+
+
+
+
+
+
+
+
+
+{% endblock content %}

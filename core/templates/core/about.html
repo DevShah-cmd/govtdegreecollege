@@ -1,0 +1,205 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<header class="about-showcase-area">
+    <section class="showcase-about" style="background-image: url('{{ about.image.url }}');">
+    </section>
+</header>
+
+{% if about %}
+<section class="about-gdc-section">
+    <div class="container">
+        <div class="about-gdc-container">
+            <div class="about-gdc-container-inside">
+                <h1 class="about-gdc-container-title font-garamond">About G.D.C</h1>
+                <p class="about-gdc-container-p">
+                    {{ about.about }}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endif %}
+
+
+<section class="about-beliefs">
+    <div class="container">
+        <div class="about-beliefs-container">
+            {% if our_vision %}
+            <article class="article-about-belief article-vision">
+                <h1 class="font-garamond">Vision</h1>
+                <p>
+                    {{ our_vision.our_vision }}
+                </p>
+            </article>
+            {% endif %}
+            <article class="article-about-belief article-mission">
+                <h1 class="font-garamond">Mission</h1>
+                <p>Government Degree College Mingora Swat, which is a ray of hope for the poor intelligent students of Malakand division, wants the stake holders' cooperation not only to maintain its highest status but also to go forward. Please help us help you in achieving the goal of quality education as well as confidence-building through the co- curricular activities by CBS. </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+{% if about %}
+<section class="facts-about-page">
+    <div class="container">
+        <h1 class="facts-main-title font-garamond">Facts</h1>
+        <div class="facts-about-page-container">
+            <div class="fact-about first-fact">
+                <h1 class="font-garamond">1995</h1>
+                <p>Opened In</p>
+            </div>
+            <div class="fact-about second-fact">
+                <h1 class="font-garamond">{{ about.students }}</h1>
+                <p>Students</p>
+            </div>
+            <div class="fact-about third-fact">
+                <h1 class="font-garamond">{{ about.faculty }}</h1>
+                <p>Faculty</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+
+
+
+
+
+
+<section class="our-values">
+    <div class="container">
+        <div class="our-values-container">
+            <h1 class="our-values-container-main-title font-garamond">Our Values</h1>
+            <div class="our-values-container-inside">
+                {% for our_value in our_values %}
+                <article class="our-value our-value-1st">
+                    <span class="icon-our-value"><i class="fa-solid fa-graduation-cap fa-4x"></i></span>
+                    <h1 class="our-value-title">{{ our_value.heading }}</h1>
+                    <p class="our-value-main-p">
+                        {{ our_value.value }}
+                    </p>
+                </article>
+                {% endfor %}
+                <!-- <article class="our-value our-value-2nd">
+                    <span class="icon-our-value"><i class="fa-solid fa-graduation-cap fa-3x"></i></span>
+                    <h1 class="our-value-title">Merit</h1>
+                    <p class="our-value-main-p">Government Degree College Mingora Swat, which is a ray of hope for the poor intelligent students of Malakand division, wants the stake holders' cooperation not only to maintain its highest status but also to go forward.</p>
+                </article>
+                <article class="our-value  our-value-3rd">
+                    <span class="icon-our-value"><i class="fa-solid fa-graduation-cap fa-3x"></i></span>
+                    <h1 class="our-value-title">Excellency</h1>
+                    <p class="our-value-main-p">Government Degree College Mingora Swat, which is a ray of hope for the poor intelligent students of Malakand division, wants the stake holders' cooperation not only to maintain its highest status but also to go forward.</p>
+                </article> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <section class="about-video-section">
+    <div class="container">
+        <div class="about-video-container">
+            <div class="about-video-container-common about-video-left">
+                <div class="about-video-content">
+                    <h1 class="about-video-title">Experience Degree college through video</h1>
+                    <p class="about-video-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem perferendis non ratione vitae cupiditate alias asperiores unde tempora voluptates blanditiis?</p>
+                </div>
+            </div>
+            <div class="about-video-container-common about-video-right">
+                <div class="about-video-main">
+                    <img src="./images/pexels-pixabay-273209.jpg" alt="" class="about-video">
+                    <div class="about-video"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+-->
+
+<section class="about-video-section">
+    <div class="container">
+        <h1 class="about-video-title font-garamond">{{ video.heading }}</h1>
+        <div class="container-about-video">
+            <div class="about-video-content">
+                <iframe width="100%" height="100%" src="{{ video.link }}" title="YouTube video player" frameborder="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+{% if principal %}
+<section class="founding-principal">
+    <div class="container">
+        <h1 class="founding-principal-title font-garamond">Principal Message</h1>
+        <div class="founding-principal-container">
+            <div class="founding-principal-right font-garamond">
+                <h1 class="founding-pricipal-name">{{ principal.name }}</h1>
+                <div class="founding-principal-about font-garamond">
+                    <p>
+                        {{ principal.message }}
+                    </p>
+                </div>
+            </div>
+            <div class="founding-principal-left">
+                <img src="{{ principal.image.url }}" alt="Principal Image">
+            </div>
+            
+
+        </div>
+    </div>
+</section>
+{% endif %}
+
+
+
+<section class="founding-principal">
+    <div class="container">
+        <h1 class="founding-principal-title font-garamond">{{ former_principal.heading }}</h1>
+        <div class="founding-principal-container">
+            <div class="founding-principal-left">
+                <img src="{{ former_principal.image.url }}" alt="Fouding Principal Image">
+            </div>
+            <div class="founding-principal-right font-garamond">
+                <h1 class="founding-pricipal-name">{{ former_principal.name }}</h1>
+                <div class="founding-principal-about font-garamond">
+                    <p>
+                        {{ former_principal.message }}
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+{% endblock content %}
