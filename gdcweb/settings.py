@@ -31,7 +31,7 @@ ALLOWED_HOSTS = [
     "*"
 ]
 
-
+# comment in settings.py
 # Application definition
 
 INSTALLED_APPS = [
