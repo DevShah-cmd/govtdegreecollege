@@ -66,6 +66,17 @@
     
 }
 
+.article-notification-article-inside h2,h3,h4,h5,h6{
+    padding: none;
+    margin-top: 1em;
+    background: rgba(0, 0, 0, 0);
+    text-align: center;
+    color: #222;
+    /* border-radius: 0.2em; */
+    display: inline-block;
+    transform: none !important;
+}
+
 
 .notification-headline-div{
     /* border: 2px solid salmon; */

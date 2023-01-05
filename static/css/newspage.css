@@ -73,7 +73,16 @@
     
 }
 
-
+.news-main-body-page h2,h3,h4,h5,h6{
+    padding: none;
+    margin-top: 1em;
+    background: rgba(0, 0, 0, 0);
+    text-align: center;
+    color: white;
+    /* border-radius: 0.2em; */
+    display: inline-block;
+    /* transform: translateX(calc((100vw - 100%) / 2)); */
+}
 
 
 

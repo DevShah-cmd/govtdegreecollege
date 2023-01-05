@@ -1,5 +1,14 @@
 {% extends "base.html" %}
 
+{% load static %}
+
+{% block extra_head_content  %}
+    <link rel="stylesheet" href="{% static 'css/faculty.css' %}">
+    <link rel="stylesheet" href="/static/css/departments.css">
+
+{% endblock %}
+
+
 {% block content %}
 
 
