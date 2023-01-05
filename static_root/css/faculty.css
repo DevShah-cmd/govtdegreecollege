@@ -1,0 +1,350 @@
+
+/* ********************************************************** Faculty Page ************************************ */
+.faculty-main-section {
+    height: 60vh;
+    /* background: linear-gradient(rgba(41, 41, 41, 0.404), rgba(0, 0, 0, 0.344)), url("../images/faculty-background.jpg"); */
+    background: linear-gradient(rgba(41, 41, 41, 0.404), rgba(0, 0, 0, 0.344));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.faculty-main {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    /* border: 2px solid salmon; */
+}
+.faculty-main-title{
+    font-size: 4rem;
+    color: #F1ECDE;
+    font-weight: 700;
+}
+
+
+
+
+
+/* ############################################## search and menu section ###########################################*/
+section.search-navigate {
+    padding: 8rem 0rem;
+}
+
+.search-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-left {
+    /* background-color: #E95453; */
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.search-by-name,
+.search-by-dep,
+.search-by-classify {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    justify-content: space-between;
+    /* border: 2px solid green; */
+}
+
+
+.search-left label {
+    font-size: 1.8rem;
+}
+
+
+.inputs {
+    width: 100%;
+    color: #000;
+    border-color: #e3e3e3;
+    border-radius: 4px;
+    padding: 14px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    border: 1px solid #eee;
+    background: #fafafa;
+    max-width: 100%;
+}
+
+.inputs:focus {
+    outline: none;
+}
+
+
+
+.search-buttons,
+.search-by-classify {
+    margin-top: 4rem;
+}
+
+
+.search-buttons {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+.search-btn {
+    width: 45%;
+    text-decoration: none;
+    border-radius: 7px;
+    cursor: pointer;
+    outline: none;
+    /* border: 1px solid rgb(98, 91, 91); */
+    border: none;
+    /* text-transform: uppercase; */
+    font-weight: 600;
+    margin-top: 3rem;
+    font-size: 1.6rem;
+    background: #fafafa;
+}
+
+.search-btn:hover {
+    background-color: #E95453;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ################################################### faculty directory ########################################## */
+section.directory {
+    background: #F6F5F1;
+    /* background: #fff; */
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+}
+
+.positions-directory {
+    /* font-size: 3rem; */
+    text-align: center;
+    margin-bottom: 5rem;
+    font-weight: 700;
+    color: #00364E;
+}
+.positions-directory h1{
+    font-size: 3rem;
+}
+
+div.directory-inside {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: green; */
+    flex-wrap: wrap;
+}
+
+
+.card {
+    max-width: 33.333%;
+    width: 23%;
+    background-color: #fff;
+    margin-bottom: 4rem;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+    border-radius: 5px;
+
+}
+
+.card:hover {
+    /* transition: top 0.2s ease, box-shadow 0.2s ease; */
+    box-shadow: 1px 1px 30px 0px rgba(18, 18, 18, 0.471);
+    transform: scale(1.05) translateZ(0);
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    max-width: 100%;
+    /* height: 250px; */
+    height: 30rem;
+    object-position: 50% 50%;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+    display: block;
+}
+
+.card h1,
+.position-name {
+    margin-left: 3rem;
+    margin-right: 1rem;
+}
+
+.card h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #00364E;
+    margin-top: 1.5rem;
+    font-weight: 700;
+}
+
+.card .position-name {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
+}
+
+.card p.card-button-learn-more {
+    border-top: 1px solid rgba(223, 223, 223, 0.7);
+    padding: 1rem 0rem;
+}
+
+.card a {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    color: #EAD917;
+}
+
+.card a:hover {
+    color: #E95453;
+}
+
+
+/* .card::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #EAD917;
+    color: #222;
+} */
+
+
+
+
+/* ########################### Laptop - 1240 Media quary ################################# */
+@media all and (max-width : 1440px) {
+
+    .card{
+        max-width: 100%;
+        width: 32%;
+    }
+
+}
+
+
+
+
+
+
+/* ########################### Laptop - 1024 Media quary ################################# */
+@media all and (max-width : 1024px) {
+
+    .card{
+        max-width: 100%;
+        width: 48%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ############################# Tablet- 768px media query  */
+
+@media all and (max-width : 768px) {
+    .faculty-main-section{
+        max-height: 40rem;
+    }
+
+
+
+
+    .search-main{
+        flex-direction: column;
+    }
+
+
+    .search-left{
+        width: 100%;
+        order: 2;
+        flex-direction: column;
+    }
+    .search-by-name,
+    .search-by-dep,
+    .search-by-classify{
+        width: 100%;
+    }
+
+    .inputs{
+        margin-bottom: 3rem;
+    }
+    .search-buttons,
+    .search-by-classify{
+        margin-top: 0rem;
+    }
+
+    .search-buttons{
+        width: 100%;
+    }
+    .search-btn{
+        height: 5rem;
+        background-color: #E95453;
+    }
+
+
+
+
+
+
+
+
+    /* ################################################### faculty directory ########################################## */
+
+    div.directory-inside{
+        flex-direction: column;
+    }
+    .card{
+        max-width: 100%;
+        width: 100%;
+    }
+
+
+    .card img{
+        height: 40rem;
+    }
+
+    
+    .card h1{
+        margin-top: 4rem;
+    }    
+    .card .position-name{
+        margin-bottom: 5rem;
+    }
+
+    
+}

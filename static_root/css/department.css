@@ -1,0 +1,164 @@
+
+/* **************************************************************** Department Page Styling ************************************** */
+
+/* ################# Upper background ####### */
+.department-main-section {
+    height: 60vh;
+    /* background: linear-gradient(rgba(41, 41, 41, 0.404), rgba(0, 0, 0, 0.344)), url("../images/botony.jpg"); */
+    background: linear-gradient(rgba(41, 41, 41, 0.404), rgba(0, 0, 0, 0.344));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #F1ECDE;
+    font-size: 2.8rem;
+    position: relative;
+
+    /* Parallex affect */
+    background-attachment: fixed;
+}
+
+.department-main {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+
+
+
+
+/* ################################## Tabs Styling ################### */
+/*
+ CSS for the main interaction
+*/
+
+.department-tabs {
+    background-color: #F6F5F1;
+    /* padding: 8rem 0rem; */
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    /* height: 100vh; */
+    min-height: 1000px;
+    font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+    color: #333;
+    font-weight: 300;
+}
+
+.tabset>input[type="radio"] {
+    position: absolute;
+    left: -200vw;
+}
+
+.tabset .tab-panel {
+    display: none;
+}
+
+.tabset>input:first-child:checked~.tab-panels>.tab-panel:first-child,
+.tabset>input:nth-child(3):checked~.tab-panels>.tab-panel:nth-child(2),
+.tabset>input:nth-child(5):checked~.tab-panels>.tab-panel:nth-child(3),
+.tabset>input:nth-child(7):checked~.tab-panels>.tab-panel:nth-child(4),
+.tabset>input:nth-child(9):checked~.tab-panels>.tab-panel:nth-child(5),
+.tabset>input:nth-child(11):checked~.tab-panels>.tab-panel:nth-child(6) {
+    display: block;
+}
+
+/*
+   Styling
+  */
+
+.tabset>label {
+    font-size: 1.8rem;
+    position: relative;
+    display: inline-block;
+    padding: 15px 15px 25px;
+    border: 1px solid transparent;
+    border-bottom: 0;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.tabset>label::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+    width: 22px;
+    height: 4px;
+    background: #8d8d8d;
+}
+
+.tabset>label:hover,
+.tabset>input:focus+label {
+    color: #06c;
+}
+
+.tabset>label:hover::after,
+.tabset>input:focus+label::after,
+.tabset>input:checked+label::after {
+    background: #06c;
+}
+
+.tabset>input:checked+label {
+    border-color: #ccc;
+    border-bottom: 1px solid #F6F5F1;
+    margin-bottom: -1px;
+}
+
+.tab-panel {
+    /* padding: 30px 0; */
+    padding: 8rem 0px;
+    border-top: 1px solid #ccc;
+}
+
+.tab-panel strong {
+    display: block;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+.tab-panel#marzen h2,
+.tab-panel#dunkles h2 {
+    font-size: 2.4rem;
+    margin-bottom: 4rem;
+}
+
+.tab-panel#marzen p,
+.tab-panel#dunkles p {
+    text-indent: 3%;
+}
+
+.tab-panel li {
+    list-style: circle;
+}
+
+/*
+   Demo purposes only
+  */
+
+/* .tabset {
+    max-width: 65em;
+}
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ############################# Tablet- 768px media query  */
+
+@media all and (max-width : 768px) {
+    .department-main-section{
+        background-attachment: scroll;
+        object-fit: cover;
+        font-size: 2rem;
+        max-height: 40rem;
+        /* border: 2px solid red; */
+    }
+}

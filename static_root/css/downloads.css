@@ -1,0 +1,94 @@
+.downloads-section{
+    padding: 10rem 0rem;
+}
+.downloads-title{
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: left;
+}
+
+
+
+.downloads-container{
+    width: 100%;
+    /* border: 2px solid red; */
+}
+
+
+
+
+.content-table {
+    border-collapse: collapse;
+    margin: 2.5rem 0;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    font-size: 1.6rem;
+}
+
+.content-table thead tr {
+    background-color: #00364E;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 1.2rem 3.5rem;
+    /* padding: 1.2rem 1.5rem; */
+    /* border: 2px solid yellowgreen; */
+}
+
+.content-table tbody tr {
+border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+border-bottom: 2px solid #00364E;
+}
+.download-button{
+    border: none;
+    background: #E95453;
+    color: #ffffff;
+}
+.download-button:hover{
+    background: #00364E;
+}
+.download-link{
+    color: #ffffff;
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+}
+/* .content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+} */
+
+
+
+
+
+/* ############################# Mobile Phones- 450px media query  */
+
+@media all and (max-width : 450px) {
+    /* body{
+        background-color: blueviolet;
+    } */
+    
+    .content-table{
+        min-width: 300px;
+    }
+    
+    .download-link{
+        padding: 0.8rem 1.6rem;
+    }
+}

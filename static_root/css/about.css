@@ -1,0 +1,652 @@
+.showcase-about{
+    /* background-image: url(../images/IMG_5548.JPG); */
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    max-height: 80rem;
+    object-fit: cover;
+}
+
+.about-gdc-section{
+    /* background-color: aliceblue; */
+    /* border: 2px solid red; */
+    position: absolute;
+    width: 100%;
+    transform: translate(0%, -50%);
+}
+.about-gdc-container{
+    /* border: 2px solid brown; */
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(31, 38, 135, 0.1);
+}
+.about-gdc-container-inside{
+    text-align: center;
+    /* border: 2px solid yellowgreen; */
+    width: 80%;
+    margin: auto;
+}
+.about-gdc-container-title{
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.about-gdc-container-title::after{
+    content: "";
+    display: block;
+    margin: auto;
+    width: 10rem;
+    height: 4px;
+    background: #EAD917;
+}
+.about-gdc-container-p{
+    font-size: 1.8rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.about-beliefs{
+    margin-top: 20rem;
+    /* border: 2px solid rgb(20, 255, 157); */
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+.about-beliefs-container{
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: space-between;
+}
+.article-about-belief{
+    /* border: 1px solid #000; */
+    width: 45%;
+    padding-top: 5rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    padding-bottom: 10rem;
+    background: #fff;
+    /* box-shadow: 0 4px 8px 0 rgba(31, 38, 135, 0.1); */
+    box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.254);
+    /* background: #F6F5F1; */
+
+}
+.article-about-belief h1{
+    font-size: 3.6rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.article-about-belief h1::after{
+    content: "";
+    display: block;
+    margin: auto;
+    width: 3rem;
+    height: 4px;
+    background: #EAD917;
+}
+.article-about-belief p{
+    font-size: 1.6rem;
+
+}
+
+
+
+
+
+
+
+
+
+.facts-about-page{
+    /* border: 2px solid rgb(0, 67, 71); */
+    /* margin-top: 20rem; */
+    background: #F6F5F1;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.facts-main-title{
+    font-size: 3.6rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.facts-main-title::after{
+    content: "";
+    display: block;
+    margin: auto;
+    width: 3rem;
+    height: 4px;
+    background: #EAD917;
+}
+
+.facts-about-page-container{
+    /* border: 2px solid aquamarine; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.fact-about{
+    /* border:2px solid bisque; */
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-align: center;
+    width: 33.333%;
+}
+.first-fact{
+    border-left: 1px solid rgba(223, 223, 223, 0.7);
+}
+.second-fact{
+    border-left: 1px solid rgba(223, 223, 223, 0.7);
+    border-right: 1px solid rgba(223, 223, 223, 0.7);
+}
+.third-fact{
+    border-right: 1px solid rgba(223, 223, 223, 0.7);
+}
+.fact-about h1{
+    font-size: 5rem;
+    font-weight: 700;
+    color: #00364E;
+}
+.fact-about p{
+    font-size: 1.8rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.our-values{
+    /* border: 2px solid red; */
+    /* background: #F6F5F1; */
+    padding: 10rem 0rem;
+}
+/* .our-values-container{
+    border: 2px solid slateblue;
+} */
+.our-values-container-main-title{
+    text-align: center;
+    font-weight: 700;
+    font-size: 3.6rem;
+    margin-bottom: 6rem;
+    color: #00364E;
+}
+.our-values-container-main-title::after{
+    content: "";
+    display: block;
+    margin: auto;
+    width: 5rem;
+    height: 4px;
+    background: #EAD917;
+}
+.our-values-container-inside{
+    /* border: 2px solid yellowgreen; */
+    /* background-color: #00364E; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.our-value{
+    /* padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem; */
+    /* border: 2px solid burlywood; */
+    width: 26%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    transition: all 0.5s ease;
+    border-top: 5px solid transparent;
+    margin-top: 3rem;
+}
+.our-value:hover{
+    border-top: 5px solid #E95453;
+    background-color: #fff;
+    cursor: pointer;
+    box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.37);
+    box-shadow: 9px 14px 73px 13px rgba(31, 38, 135, 0.15);
+    
+    border-radius: 10px;
+}
+.icon-our-value{
+    color: #E95453;
+}
+.our-value-title{
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+.our-value-main-p{
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2.4rem;
+    /* text-align: center; */
+    /* text-align: left; */
+}
+
+
+
+
+
+
+
+
+
+
+
+.about-video-section{
+    /* border: 2px solid salmon; */
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    background: #F6F5F1;
+}
+.about-video-title{
+    font-size: 3.6rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+.about-video-title::after{
+    content: "";
+    display: block;
+    margin: auto;
+    width: 10rem;
+    height: 4px;
+    background: #EAD917;
+}
+
+
+.container-about-video{
+    /* border: 2px solid black; */
+    width: 70%;
+    height: 50rem;
+    margin: auto;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+
+}
+.about-video-content{
+    /* border: 2px solid yellowgreen; */
+    width: 98%;
+    height: 98%;
+    border: none;
+    /* margin: auto; */
+}
+
+
+
+
+
+.founding-principal{
+    /* border: 2px solid brown; */
+    padding: 8rem 0rem;
+}
+.founding-principal-title{
+    font-size: 3.6rem;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+.founding-principal-title::after{
+    content: "";
+    display: block;
+    margin: auto;
+    width: 10rem;
+    height: 4px;
+    background: #EAD917;
+}
+.founding-principal-container{
+    /* border: 2px solid indigo; */
+    display: flex;
+    justify-content: space-between;
+}
+.founding-principal-left{
+    width: 45%;
+    /* border: 2px solid black; */
+}
+.founding-principal-left img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    /* max-height: 60rem; */
+}
+.founding-principal-right{
+    width: 55%;
+    /* border: 2px solid yellowgreen; */
+    background: #fff;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    box-shadow: 0 4px 8px 0 rgba(31, 38, 135, 0.1);
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+.founding-pricipal-name{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+.founding-principal-about{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+
+
+
+.principal-about-container
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ***********************************************************   Media quaries   ******************************************************************  */
+
+
+/* ########################### 1440 Media quary ################################# */
+@media all and (min-width : 1440px) {
+    .container-about-video{
+        height: 60rem;
+    }
+
+
+}
+
+
+/* ########################### Laptop - 1024 Media quary ################################# */
+@media all and (max-width : 1024px) {
+    .about-beliefs{
+        margin-top: 25rem;
+    }
+
+    .article-about-belief{
+        width: 48%;
+    }
+
+
+    .container-about-video{
+        height: 35rem;
+    }
+
+
+}
+
+
+
+
+
+/* ############################# Tablet- 768px media query  */
+
+@media all and (max-width : 768px) {
+    /* body{
+        background-color: azure;
+    } */
+    .about-gdc-section{
+        /* border: 2px solid red; */
+        transform: translate(0%, -20%);
+    }
+    .about-beliefs{
+        margin-top: 40rem;
+    }
+    .about-beliefs-container{
+        flex-direction: column;
+    } 
+    .article-about-belief{
+        width: 100%;
+        padding: 5rem;
+    }
+    .article-vision{
+        margin-bottom: 5rem;
+    }
+
+
+    
+
+
+    
+    .facts-about-page-container{
+        flex-direction: column;
+    }
+    .fact-about{
+        width: 100%;
+    }
+
+    .first-fact{
+        border: none;
+        
+    }
+    .second-fact{
+        border-bottom: 1px solid rgba(223, 223, 223, 0.7);
+        border-top: 1px solid rgba(223, 223, 223, 0.7);
+        border-left: none;
+        border-right: none;
+    }
+    .third-fact{
+        border: none;
+    }
+
+
+
+    .our-values-container-inside{
+        flex-direction: column;
+    }
+    .our-value{
+        width: 100%;
+        border-top: 5px solid #E95453;
+        background-color: #fff;
+        cursor: pointer;
+        box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.37);
+        box-shadow: 9px 14px 73px 13px rgba(31, 38, 135, 0.15);
+        
+        border-radius: 10px;
+    }
+    .our-value-1st,
+    .our-value-2nd
+    {
+        margin-bottom: 3rem;
+    }
+
+
+
+
+
+
+
+    .container-about-video{
+        width: 80%;
+    }
+
+
+
+    .founding-principal-container{
+        flex-direction: column;
+    }
+    .founding-principal-left{
+        width: 100%;
+    }
+
+    .founding-principal-right{
+        width: 100%;
+        padding: 5rem;
+    }
+    .founding-principal-left img{
+        width: 100%;
+        max-height: 40rem;
+    }
+
+
+}
+
+
+
+
+
+
+
+/* ############################# Smaller Tablet- 650px media query  */
+
+@media all and (max-width : 650px) {
+    /* body{
+        background-color: bisque;
+    } */
+    
+    .about-gdc-container{
+        width: 85%;
+    }
+
+
+
+    .about-beliefs{
+        margin-top: 55rem;
+    }
+
+    
+    .container-about-video{
+        width: 90%;
+    }
+
+    
+
+
+
+    
+
+
+
+
+}
+
+
+
+
+
+/* ############################# Mobile Phones- 500px media query  */
+
+@media all and (max-width : 500px) {
+    .about-gdc-container{
+        width: 100%;
+    }
+
+
+
+    .about-beliefs{
+        margin-top: 55rem;
+    }
+    .about-beliefs-container{
+        flex-direction: column;
+    }    
+    .article-about-belief{
+        width: 100%;
+        padding: 5rem;
+    }
+    .article-vision{
+        margin-bottom: 4rem;
+    }
+
+
+
+
+
+
+    .container-about-video{
+        width: 100%;
+    }
+
+
+
+
+
+    /* .founding-principal-container{
+        flex-direction: column;
+    }
+    .founding-principal-left{
+        width: 100%;
+    }
+
+    .founding-principal-right{
+        width: 100%;
+        padding: 5rem;
+    } */
+}
+
+
+/* ############################# Smaller Mobile Phones- 434px media query  */
+
+@media all and (max-width : 434px) {
+    .about-gdc-container{
+        width: 100%;
+    }
+
+
+    .about-beliefs{
+        margin-top: 65rem;
+    }
+}
+
+
+
+
+/* ############################# Very smaller Mobile Phones- 434px media query  */
+@media all and (max-width : 300px) {
+    .about-beliefs{
+        margin-top: 35rem;
+    }
+}
