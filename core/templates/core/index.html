@@ -4,17 +4,23 @@
 
 
 
-
     <!-- ############################################# Show Area ######################################################## -->
-<section class="show-area" style="background-image: url('{{ header.image.url }}');">
-    <div class="show-container">
-        <div class="container">
-            
+<!-- <section class="show-area"> -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            {% for slide in header|slice:":10" %}
+            <div class="swiper-slide">
+                <img src="{{ slide.image.url }}" alt="" class="swiper-lazy">
+            </div>
+            {% endfor %}
         </div>
+            
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
     </div>
-    
-
 </section>
+
 
 <section class="study-gdc-section">
     <div class="container">
