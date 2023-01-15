@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Government Degree College Mingora Swat</title>
     <link rel="icon" type="image/x-icon" href="/static/images/logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 
     
 </head>
@@ -191,6 +192,31 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="/static/js/script.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        
 
+
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            effect: "fade",
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            //   type: "progressbar",
+                clickable: true,
+                
+            },
+        });
+
+    </script>
 </body>
 </html>
