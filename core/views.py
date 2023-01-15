@@ -31,7 +31,8 @@ def index_view(request):
     # about = About.objects.latest('id')
     about = About.objects.latest('id')
     actions = Action.objects.filter().order_by('-id')
-    header = Header.objects.latest('id')
+    # header = Header.objects.latest('id')
+    header = Header.objects.all()
     campus_life = CampusLife.objects.filter().order_by('-id')
     
 
