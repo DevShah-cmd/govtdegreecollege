@@ -329,98 +329,74 @@ a {
 .show-area {
     height: 80vh;
     /* background-image: url(../images/syed-bilal-javaid-uc9GjDHj1yA-unsplash.jpg); */
-    background-size: cover;
+    /* background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 
     position: relative;
     max-height: 80rem;
     /* Parallex affect */
     /* background-attachment: fixed; */
     /* border: 2px solid red; */
-    object-fit: cover;
 
 }
 
-/* .show-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+.swiper {
+    width: 100%;
+    height: 75vh;
 }
-.show-container h1{
-    color: #00364E;
-    font-size: 6rem;
-    font-weight: 700;
-    text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
-    mix-blend-mode: multiply;
-}
-.show-container h1::selection{
-    color: #fff;
+
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+  }
+
+.swiper-button-next,
+.swiper-button-prev{
+    color: #fff !important;
     background: #00364E;
-} */
-
-
-.show-area-content {
-    /* width: 30%; */
-    width: 50rem;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    color: rgb(0, 0, 0);
-    position: absolute;
-    top: 50%;
-    padding: 3rem;
-    transform: translate(0, -30%);
-
-    background: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-
+    padding: 15px 20px;
+    
 }
-
-.show-area-content h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    color: #00364E;
+.swiper-button-prev::after,
+.swiper-button-next::after
+{
+    font-size: 10px !important;
 }
-
-.show-area-content p {
-    font-size: 1.6rem;
-    font-weight: 500;
-    margin-bottom: 4rem;
-}
-
-.show-area-content button {
-    font-size: 1.4rem;
-    background-color: #00364E;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    cursor: pointer;
-    border: none;
-}
-
-
-.show-area-content button a {
-    text-decoration: none;
-    color: #fff;
-}
-
-.show-area-content button:hover {
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
     background-color: #E95453;
 }
 
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    user-select: none;
 
-
-
-
-
+}
 
 
 
@@ -428,6 +404,7 @@ a {
     /* border: 2px solid red; */
     position: absolute;
     width: 100%;
+    z-index: 10;
     transform: translate(0%, -50%);
 }
 .study-gdc-container{
@@ -2089,14 +2066,13 @@ footer.footer {
 /* ############################# Tablet- 768px media query  */
 
 @media all and (max-width : 768px) {
-    /* .show-area{
-        border: 5px solid red;
-        width: 100%;
-    } */
-    /* .logo-text{
-        color: #fff;
-    } */
     
+    .swiper{
+        height: 40rem;
+    }
+    .swiper-slide img{
+        height: 40rem;
+    }
     .container-special{
         width: 100%;
     }
